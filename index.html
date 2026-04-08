@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- GSAP -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/SplitText.min.js"></script>
+    <!-- LenisJS-->
+     <script src="https://unpkg.com/lenis@1.3.17/dist/lenis.min.js"></script> 
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/styles/hero.css">
+    <link rel="stylesheet" href="/styles/stacking-cards.css">
+    <link rel="stylesheet" href="/styles/text-on-circle.css">
+    <link rel="stylesheet" href="/styles/about.css">
+    <link rel="stylesheet" href="/styles/instagram.css">
+    <title>Gogol Landing</title>
+</head>
+
+<body>
+    <!-- Dialog -->
+    <dialog id="dialog">
+        <h3 class="font-sans-bold text-3xl mb-4">Це демо сайт</h3>
+        <p>Тут не буде ніякого контенту, цей сайт створений для портфоліо.
+        <br/>
+        Якщо вам потрібен подібний сайт, ви можете зв'язатися зі мною у соцмережах</p>
+        <div class="links">
+            <a href="https://www.instagram.com/needhlep/" class="px-3 py-2 bg-gray-100 hover:bg-gray-200 rounded-lg font-regular text-lg">Instagram</a>
+            <a href="https://t.me/dazheneznayu" class="px-3 py-2 bg-gray-100 hover:bg-gray-200 rounded-lg font-regular text-lg">Telegram</a>
+            <a href="https://www.linkedin.com/in/vladyslav-fedorenko-670455123/" class="px-3 py-2 bg-gray-100 hover:bg-gray-200 rounded-lg font-regular text-lg">LinkedIn</a>
+        </div>
+        <button id="close-dialog" class="mt-2 py-2 px-4 border border-gray-300 hover:bg-gray-200 cursor-pointer text-black">Закрити</button>
+    </dialog>
+
+    <!-- Header -->
+    <header>
+        <button class="open-dialog">Меню</button>
+        <button class="open-dialog">Про нас</button>
+        <button class="open-dialog">Fine Cup</button>
+        <img src="assets/Logo.svg" alt="logo">
+        <button class="open-dialog">Gogol Bakery</button>
+        <button class="open-dialog">Команда</button>
+        <button class="open-dialog">Контакти</button>
+    </header>
+
+    <!-- Hero -->
+    <section id="hero">
+        <div class="scroll-container">
+            <div class="inner-scroll-container">
+                <p class="scroll-text">Gogol Coffee Space</p>
+                <p class="asterisk">✽</p>
+                <p class="scroll-text">Fine Cup</p>
+                <p class="asterisk">✽</p>
+                <p class="scroll-text">Gogol Bakery</p>
+                <p class="asterisk">✽</p>
+            </div>
+            <div class="inner-scroll-container">
+                <p class="scroll-text">Gogol Coffee Space</p>
+                <p class="asterisk">✽</p>
+                <p class="scroll-text">Fine Cup</p>
+                <p class="asterisk">✽</p>
+                <p class="scroll-text">Gogol Bakery</p>
+                <p class="asterisk">✽</p>
+            </div>
+            <div class="inner-scroll-container">
+                <p class="scroll-text">Gogol Coffee Space</p>
+                <p class="asterisk">✽</p>
+                <p class="scroll-text">Fine Cup</p>
+                <p class="asterisk">✽</p>
+                <p class="scroll-text">Gogol Bakery</p>
+                <p class="asterisk">✽</p>
+            </div>
+            <div class="inner-scroll-container">
+                <p class="scroll-text">Gogol Coffee Space</p>
+                <p class="asterisk">✽</p>
+                <p class="scroll-text">Fine Cup</p>
+                <p class="asterisk">✽</p>
+                <p class="scroll-text">Gogol Bakery</p>
+                <p class="asterisk">✽</p>
+            </div>
+        </div>
+        <div class="hero-content">
+            <h1 id="title" class="hero-headline">
+                Ми створюємо кавʼярні третьої хвилі для тих, хто цінує смак, процес і атмосферу
+            </h1>
+            <div id="hero-image"></div>
+        </div>
+    </section>
+
+    <!-- Text on circle -->
+    <section class="text-on-circle-container">
+        <div class="circle-wrapper">
+            <div class="circle">
+                <h3 class="font-regular subtitle">Ми створюємо кавову культуру</h3>
+                <svg viewBox="0 0 2864 1432" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path id="circle" pathLength="6" fill="none" stroke="none" 
+                        d="M0.5 1432C0.5 1432 0.499512 0.5 1432 0.5C2863.5 0.5 2863.5 1432 2863.5 1432"/>
+
+                    <path id="circle-2" pathLength="6" fill="none" stroke="none"
+                    d="M-0.000976562 987.075C296.616 678.979 747.281 444.926 1432 444.926C2116.72 444.926 2567.38 678.979 2864 987.075" />
+
+                    <text fill="white">
+
+                        <!-- Desktop version -->
+
+                        <textPath 
+                            class="circle-text font-sans-bold" 
+                            id="text-1"
+                            href="#circle"
+                            startOffset="3">
+                            <tspan>Свіжообсмажена кава</tspan>
+                            <tspan x="0" dy="180">з унікальним профілем</tspan>
+                        </textPath>
+
+                        <textPath 
+                            class="circle-text font-sans-bold" 
+                            id="text-2" 
+                            href="#circle"
+                            startOffset="7">
+                            <tspan>Баристи, які знають</tspan>
+                            <tspan x="0" dy="180">свою справу</tspan>
+                        </textPath>
+
+                         <textPath 
+                            class="circle-text font-sans-bold" 
+                            id="text-3" 
+                            href="#circle"
+                            startOffset="8">
+                            <tspan>Десерти та випічка</tspan>
+                            <tspan x="0" dy="180">власного виробництва</tspan>
+                        </textPath>
+
+                        <!-- Mobile version -->
+
+                        <textPath 
+                            class="circle-text-mob font-sans-bold" 
+                            id="text-1" 
+                            href="#circle-2"
+                            startOffset="3">
+                            <tspan x="0" dy="-120">Свіжообсмажена </tspan>
+                            <tspan x="0" dy="240">кава з унікальним</tspan>
+                            <tspan x="0" dy="240">профілем</tspan>
+                        </textPath>
+
+                        <textPath 
+                            class="circle-text-mob font-sans-bold" 
+                            id="text-2" 
+                            href="#circle-2"
+                            startOffset="9">
+                            <tspan>Баристи, які знають</tspan>
+                            <tspan x="0" dy="240">свою справу</tspan>
+                        </textPath>
+
+                        <textPath 
+                            class="circle-text-mob font-sans-bold" 
+                            id="text-3" 
+                            href="#circle-2"
+                            startOffset="9">
+                            <tspan>Десерти та випічка</tspan>
+                            <tspan x="0" dy="240">власного виробництва</tspan>
+                        </textPath>
+                    </text>
+                </svg>
+            </div>
+        </div>
+        <div class="image-grid">
+            <div class="image-1"></div>
+            <div class="image-2"></div>
+            <div class="image-3"></div>
+            <div class="image-4"></div>
+            <div class="image-5"></div>
+            <div class="image-6"></div>
+            <div class="image-7"></div>
+            <div class="image-8"></div>
+            <div class="image-9"></div>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section class="about-section">
+        <div class="about-wrapper">
+            <h4 class="stars">✽ ✽ ✽</h4>
+            <h4 class="about-text">
+                <span class="name">Gogol Coffee Space</span>
+                <span class="anim-text">
+                    розвиває сучасну кавову культуру в Україні. Ми обсмажуємо зерна самостійно, навчаємо бариста бути професіоналами та створюємо атмосферу, де хочеться залишитися.
+                </span>
+            </h4>
+        </div>
+    </section>
+
+    <!-- Stacking cards -->
+    <section class="stacking-cards-container">
+        <div class="stacking-card-wrapper wrapper-1">
+            <div class="stacking-card card-1">
+                <div class="logo-bg">
+                    <img src="/assets/fine-cup/logo.png" alt="Fine Cup Logo">
+                </div>
+                <img class="tool" src="/assets/fine-cup/barista-tool.png" alt="">
+                <img class="beans" src="/assets/fine-cup/coffee-beand.png" alt="">
+                <img class="pot" src="/assets/fine-cup/coffe-pot.png" alt="">
+                <img class="drip-1" src="/assets/fine-cup/drip-1.png" alt="">
+                <img class="fine-cup" src="/assets/fine-cup/fine-cup.png" alt="">
+                <img class="drip-2" src="/assets/fine-cup/drip-2.png" alt="">
+                <h1>Кава для дому та бізнесу</h1>
+                <div class="features">
+                    <div class="feature">
+                        <img src="/assets/fine-cup/icon-01.svg" alt="">
+                        <p>Зернова, мелена та капсульна кава</p>
+                    </div>
+                    <div class="feature">
+                        <img src="/assets/fine-cup/icon-02.svg" alt="">
+                        <p>Готові рішення для кавʼярень, ресторанів, офісів</p>
+                    </div>
+                    <div class="feature">
+                        <img src="/assets/fine-cup/icon-03.svg" alt="">
+                        <p>Консультації з вибору та навчання персоналу</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="stacking-card-wrapper wrapper-2">
+            <div class="stacking-card card-2">
+                <div class="logo-bg">
+                    <img src="/assets/gogol-bakery/Logo.svg" alt="Gogol Bakery Logo">
+                </div>
+                <h1>Солодка частина нашого світу</h1>
+                <div class="bakery-photos">
+                    <div class="photo bakery-photo-1"></div>
+                    <div class="photo bakery-photo-2"></div>
+                    <div class="bakery-feature">
+                        <p class="font-regular">
+                            ✽
+                            <br/>
+                            Щоденна випічна для кавʼярень Gogol</p>
+                    </div>
+                    <div class="photo bakery-photo-3"></div>
+                    <div class="photo bakery-photo-4"></div>
+                    <div class="bakery-feature">
+                        <p class="font-regular">
+                            ✽
+                            <br/>
+                            Торти та десерти на замовлення</p>
+                    </div>
+                    <div class="photo bakery-photo-5"></div>
+                    <div class="bakery-feature">
+                        <p class="font-regular">
+                            ✽
+                            <br/>
+                            Вироби для бізнесу та партнерських закладів</p>
+                    </div>
+                    <div class="photo bakery-photo-6"></div>
+                    <div class="photo bakery-photo-7"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Instagram -->
+    <section class="instagram-container">
+        <div>
+            <h3 class="font-sans-bold">Слідкуйте за нами в Instagram</h3>
+            <h2 class="font-regular2">@gogol_coffee_space</h2>
+            <p class="font-regular">Зазирни за лаштунки Gogol Coffee Space — кава, процес і життя наших кавʼярень щодня.
+Приєднуйся до нас в Instagram.</p>
+            <div class="inst-photos">
+                <div class="instagram-image photo-1"></div>
+                <div class="instagram-image photo-2"></div>
+                <div class="instagram-image photo-3"></div>
+                <div class="instagram-image photo-4"></div>
+                <div class="instagram-image photo-5"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        
+        
+    </footer>
+
+    <script src="animation/hero.js"></script>
+    <script src="animation/text-on-circle.js"></script>
+    <script src="animation/about.js"></script>
+    <script src="animation/stacking-cards.js"></script>
+    <script src="animation/smooth-scroll.js"></script>
+    <script src="animation/instagram.js"></script>
+    <!-- Dialog  -->
+    <script>
+        const openDialog = document.querySelectorAll('.open-dialog')
+        const closeDialog = document.getElementById('close-dialog')
+        const dialog = document.getElementById('dialog')
+
+        dialog.addEventListener('click', onClick);
+
+        openDialog.forEach(element => {
+            element.addEventListener('click', () => {
+                dialog.showModal()
+            })
+        })
+
+        closeDialog.addEventListener('click', () => {
+            dialog.close()
+        })
+
+        function onClick(event) {
+            if (event.target === dialog) {
+                dialog.close();
+            }
+        }
+    </script>
+</body> 
+</html>

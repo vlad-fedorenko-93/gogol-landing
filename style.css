@@ -1,0 +1,149 @@
+@font-face {
+    font-family: 'KyivTypeSans-Bold';
+    src: url('fonts/KyivTypeSans-Bold.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'KyivTypeSerif-Regular';
+    src: url('fonts/KyivTypeSerif-Regular.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'KyivTypeSerif-Regular2';
+    src: 
+        url('fonts/KyivTypeSerif-Regular2.woff2') format('woff2'),
+        url('fonts/KyivTypeSerif-Regular2.woff') format('woff'),
+        url('fonts/KyivTypeSerif-Regular2.eot') format('eot');
+}
+
+:root {
+   --blue: #B4DDE6;
+    --white: #FFFFFF;
+    --blue: #C5E1F7;
+    --beige: #F8EBDB;
+    --pink: #E7BBCE;
+    --brown-100: #6A4846;
+    --brown-200: #241C1C;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    width: 100vw;
+}
+
+html .lenis {
+    height: auto;
+}
+
+body {
+    margin: 0;
+}
+
+.font-regular {
+    font-family: 'KyivTypeSerif-Regular';
+}
+
+.font-regular2 {
+    font-family: 'KyivTypeSerif-Regular2';
+}
+
+.font-sans-bold {
+    font-family: 'KyivTypeSans-Bold';
+}
+
+/* header */
+
+header {
+    background: var(--beige);
+    display: flex;
+    gap: 48px;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    width: 100vw;
+}
+
+header button {
+    background: none;
+    padding: 6px 12px;
+    border-radius: 8px;
+    transition: background .5s ease;
+    font-family: 'KyivTypeSerif-Regular';
+    font-size: 1.25rem;
+    border: none;
+    cursor: pointer;
+    z-index: 100;
+}
+
+header button:hover {
+    background: var(--white);
+}
+
+/* modal */
+
+#dialog {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: none;
+    border-radius: 12px;
+    padding: 24px;
+}
+
+#dialog h3 {
+    font-family: 'KyivTypeSans-Bold';
+    font-size: 1.75rem;
+    margin-bottom: 16px;
+    color: var(--brown-200);
+}
+
+#dialog p {
+    font-family: 'KyivTypeSerif-Regular';
+    font-size: 1.125rem;
+    margin-bottom: 12px;
+    color: var(--brown-200);
+    
+}
+
+#dialog button {
+    align-self: flex-start;
+    background: var(--beige);
+    font-family: 'KyivTypeSerif-Regular';
+    font-size: 1.125rem;
+    color: var(--brown-200);
+    border: none;
+    margin-top: 16px;
+    padding: 12px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all .5s ease;
+}
+
+#dialog button:hover {
+    background: hsl(from var(--beige) h s calc(l - 5));
+}
+
+#dialog button:active {
+    background: hsl(from var(--beige) h s calc(l - 15));
+}
+
+#dialog .links {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 16px;
+    height: fit-content;
+}
+
+#dialog a {
+    text-decoration: none;
+    color: var(--brown-200);
+    padding: 8px 16px;
+    border-radius: 4px;
+    background: var(--blue);
+}

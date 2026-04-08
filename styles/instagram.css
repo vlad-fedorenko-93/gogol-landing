@@ -1,0 +1,88 @@
+/* instagram */
+
+.instagram-container {
+    width: 100vw;
+    height: 100vh;
+    background: var(--beige);
+    overflow: clip;
+}
+
+.instagram-container > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    text-align: center;
+}
+
+.instagram-container h3 {
+    font-size: 1.5rem;
+    margin-bottom: 12px;
+}
+
+.instagram-container h2 {
+    font-size: 3rem;
+    margin-bottom: 24px;
+}
+
+.instagram-container p {
+    font-size: 1.25rem;
+    width: 40%;
+}
+
+.instagram-image {
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+    border: 10px solid white;
+    border-bottom: 50px solid white;
+    position: relative;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.inst-photos {
+    margin-top: 96px;
+    display: flex;
+}
+
+.photo-1 {
+    rotate: 10deg;
+    top: 10px;
+    left: 50px;
+    background-image: url('/assets/instagram/photo-1.webp');
+    background-size: cover;
+    background-position: center;
+}
+
+.photo-2 {
+    rotate: -15deg;
+    top: -20px;
+    background-image: url('/assets/instagram/photo-2.webp');
+    background-size: cover;
+    background-position: center;
+}
+
+.photo-3 {
+    rotate: 8deg;
+    top: 70px;
+    background-image: url('/assets/instagram/photo-3.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.photo-4 {
+    rotate: -5deg;
+    top: -70px;
+    background-image: url('/assets/instagram/photo-4.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.photo-5 {
+    rotate: 15deg;
+    top: 70px;
+    background-image: url('/assets/instagram/photo-n.jpg');
+    background-size: cover;
+    background-position: bottom;
+}
