@@ -34,6 +34,7 @@
 
 html {
     width: 100vw;
+    overflow: clip;
 }
 
 html .lenis {
@@ -58,7 +59,7 @@ body {
 
 /* header */
 
-header {
+.desktop-header {
     background: var(--beige);
     display: flex;
     gap: 48px;
@@ -68,7 +69,7 @@ header {
     width: 100vw;
 }
 
-header button {
+.desktop-header button {
     background: none;
     padding: 6px 12px;
     border-radius: 8px;
@@ -80,8 +81,12 @@ header button {
     z-index: 100;
 }
 
-header button:hover {
+.desktop-header button:hover {
     background: var(--white);
+}
+
+.mobile-header {
+    display: none;
 }
 
 /* modal */
@@ -146,4 +151,35 @@ header button:hover {
     padding: 8px 16px;
     border-radius: 4px;
     background: var(--blue);
+}
+
+
+
+
+@media (max-width: 1200px) {
+    .desktop-header {
+        background: var(--beige);
+        display: flex;
+        gap: 24px;
+        align-items: center;
+        justify-content: center;
+        padding: 16px;
+        width: 100vw;
+    }
+}
+
+
+@media (max-width: 1000px) {
+    .desktop-header {
+        display: none;
+    }
+
+    .mobile-header {
+        background: var(--beige);
+        display: flex;
+        padding: 16px 32px;
+        width: 100vw;
+        justify-content: space-between;
+        align-items: center;
+    }
 }

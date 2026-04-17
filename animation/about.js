@@ -12,5 +12,8 @@ document.addEventListener("DOMContentLoaded", (event) => {
     },
     opacity: 0.1,
     stagger: 0.3,
+    onComplete: () => {
+      split.revert(); // 💥 unsplit after animation
+    },
   })
 })

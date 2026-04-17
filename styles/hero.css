@@ -105,3 +105,28 @@
   font-family: "KyivTypeSerif-Regular2";
   letter-spacing: 0.05em;
 }
+
+@media (max-width: 1023px) {
+
+  .hero-content{
+    padding-top: 64px;
+  }
+
+  .hero-headline {
+    font-size: 64px;
+    width: 90%;
+  }
+}
+
+@media (max-width: 767px) {
+
+  .hero-content{
+    padding-top: 32px;
+  }
+
+  .hero-headline {
+    font-size: min(56px, 9vw);
+    width: 90%;
+  }
+  
+}

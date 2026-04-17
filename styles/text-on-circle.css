@@ -19,13 +19,21 @@
     width: 100%;
     height: 100vh;
     overflow: clip;
-    padding-top: 30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5vw;
+
 }
 
-svg {
+.text-on-circle-svg {
     width: 100vw;
-    height: 100vh;
+    height: min(90vw, 700px);
     overflow: visible;
+}
+
+.text-on-circle-svg path {
+    transform: translateY(500px);
 }
 
 .circle-text {
@@ -37,7 +45,6 @@ svg {
 .circle-text-mob {
     display: none;
 }
-
 
 .image-grid {
     width: 100vw;
@@ -54,7 +61,7 @@ svg {
     text-align: center;
     width: 100%;
     position: relative;
-    bottom: 100px;
+    transform: translateY(100px);
 }
 
 .image-grid div {
@@ -135,15 +142,85 @@ svg {
     background-position: center;
 }
 
+@media (max-width: 1023px) {
+    .subtitle {
+        font-size: 1.75rem;
+        letter-spacing: 6%;
+    }  
+}
+
 
 @media (max-width: 768px) {
     .circle-text {
         display: none;
     }
 
+    .text-on-circle-svg path {
+        transform: translateY(200px);
+    }
+
+    .subtitle {
+        font-size: 1.35rem;
+        letter-spacing: 6%;
+    } 
+
     .circle-text-mob {
         text-anchor: middle; 
         font-size: 260px;
         display: block;
+    }
+
+    .image-grid {
+        width: 100vw;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(12, 1fr);
+        gap: 10px;
+        padding: 32px 0px;
+    }
+
+    .image-1 {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+    }
+
+    .image-2 {
+        grid-column: 2 / 3;
+        grid-row: 2 / 3;
+    }
+
+    .image-3 {
+        grid-column: 2 / 3;
+        grid-row: 4 / 5;
+    }
+
+    .image-4 {
+        grid-column: 1 / 2;
+        grid-row: 5 / 6;
+    }
+
+    .image-5 {
+        grid-column: 2 / 3;
+        grid-row: 7 / 8;
+    }
+
+    .image-6 {
+        grid-column: 1 / 2;
+        grid-row: 8 / 9;
+    }
+
+    .image-7 {
+        grid-column: 2 / 3;
+        grid-row: 9 / 10;
+    }
+
+    .image-8 {
+        grid-column: 1 / 2;
+        grid-row: 11 / 12;
+    }
+
+    .image-9 {
+        grid-column: 2 / 3;
+        grid-row: 12 / 13;
     }
 }

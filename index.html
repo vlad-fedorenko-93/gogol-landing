@@ -36,7 +36,7 @@
     </dialog>
 
     <!-- Header -->
-    <header>
+    <header class="desktop-header">
         <button class="open-dialog">Меню</button>
         <button class="open-dialog">Про нас</button>
         <button class="open-dialog">Fine Cup</button>
@@ -44,6 +44,14 @@
         <button class="open-dialog">Gogol Bakery</button>
         <button class="open-dialog">Команда</button>
         <button class="open-dialog">Контакти</button>
+    </header>
+
+    <header class="mobile-header open-dialog">
+        <img src="assets/Logo.svg" alt="logo">
+        <svg width="66" height="48" viewBox="0 0 66 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 17H65.4011" stroke="#241C1C" stroke-width="2"/>
+            <path d="M0 31H65.4011" stroke="#241C1C" stroke-width="2"/>
+        </svg>
     </header>
 
     <!-- Hero -->
@@ -95,16 +103,14 @@
         <div class="circle-wrapper">
             <div class="circle">
                 <h3 class="font-regular subtitle">Ми створюємо кавову культуру</h3>
-                <svg viewBox="0 0 2864 1432" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg class="text-on-circle-svg" viewBox="0 0 2864 1432" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path id="circle" pathLength="6" fill="none" stroke="none" 
                         d="M0.5 1432C0.5 1432 0.499512 0.5 1432 0.5C2863.5 0.5 2863.5 1432 2863.5 1432"/>
 
-                    <path id="circle-2" pathLength="6" fill="none" stroke="none"
-                    d="M-0.000976562 987.075C296.616 678.979 747.281 444.926 1432 444.926C2116.72 444.926 2567.38 678.979 2864 987.075" />
+                    <path id="circle-2" pathLength="6" fill="none" stroke="none" style="scale: 1.5; transform-origin: center;"
+                        d="M-0.000976562 987.075C296.616 678.979 747.281 444.926 1432 444.926C2116.72 444.926 2567.38 678.979 2864 987.075" />
 
                     <text fill="white">
-
-                        <!-- Desktop version -->
 
                         <textPath 
                             class="circle-text font-sans-bold" 
@@ -132,8 +138,6 @@
                             <tspan>Десерти та випічка</tspan>
                             <tspan x="0" dy="180">власного виробництва</tspan>
                         </textPath>
-
-                        <!-- Mobile version -->
 
                         <textPath 
                             class="circle-text-mob font-sans-bold" 
@@ -276,11 +280,6 @@
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer>
-        
-        
-    </footer>
 
     <script src="animation/hero.js"></script>
     <script src="animation/text-on-circle.js"></script>

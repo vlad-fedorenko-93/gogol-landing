@@ -77,7 +77,6 @@
 }
 
 .card-2 {
-  /* padding-top: 200px; */
   background: var(--pink);
   color: var(--brown-200);
 }
@@ -86,6 +85,8 @@
   display: flex;
   justify-content: center;
   gap: 20px;
+  max-width: 70vw;
+  flex-wrap: wrap;
 }
 
 .card-1 .feature {
@@ -110,7 +111,7 @@
 .pot {
   width: 315px;
   height: 394px;
-  transform: rotate(35deg);
+  transform: rotate(35deg) scale(1);
   left: -120px;
   top: 80px;
 }
@@ -118,7 +119,7 @@
 .tool {
   width: 196px;
   height: 482px;
-  transform: rotate(-40deg);
+  transform: rotate(-40deg) scale(1);
   left: -90px;
   bottom: 48px;
   z-index: 5;
@@ -128,19 +129,20 @@
   width: 298px;
   height: 518px;
   left: 0px;
+  transform: scale(1);
 }
 
 .drip-1 {
   width: 315px;
   height: 394px;
-  transform: rotate(-35deg);
+  transform: rotate(-35deg) scale(1);
   right: -120px;
   top: 80px;
 }
 
 .fine-cup {
   width: 500px;
-  transform: rotate(-50deg);
+  transform: rotate(-50deg) scale(1);
   right: -200px;
   top: 280px;
 }
@@ -148,7 +150,7 @@
 .drip-2 {
   width: 315px;
   height: 394px;
-  transform: rotate(-60deg);
+  transform: rotate(-60deg) scale(1);
   right: -120px;
   bottom: 20px;
 }
@@ -160,7 +162,7 @@
   height: 300px;
   display: flex;
   gap: 20px;
-  margin-left: 110vw;
+  margin-left: 100%;
 }
 
 .bakery-photos > div {
@@ -226,4 +228,140 @@
   line-height: 130%;
   margin-top: auto;
   margin-bottom: auto;
+}
+
+@media (max-width: 1023px) {
+
+  .stacking-card-wrapper .logo-bg {
+    width: 104px;
+    height: 104px;
+  }
+
+  .stacking-card-wrapper .logo-bg img {
+    width: 64px;
+    height: 64px;
+  }
+
+  .stacking-card-wrapper h1 {
+    font-size: 64px;
+    width: 70vw;
+  }
+  
+  .card-1 .features {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 70vw;
+    gap: 20px;
+  }
+
+  .card-1 .feature {
+    gap: 16px;
+    width: 250px;
+    font-size: 20px;
+  }
+
+  .pot {
+    left: -160px;
+    top: 24px;
+  }
+
+  .tool {
+    left: -90px;
+    bottom: 24px;
+    z-index: 5;
+  }
+
+  .beans {
+    left: -60px;
+  }
+
+  .drip-1 {
+    right: -150px;
+    top: 40px;
+  }
+
+  .fine-cup {
+    right: -300px;
+    top: 240px;
+  }
+
+  .drip-2 {
+    right: -180px;
+    bottom: 0px;
+  }
+
+  .bakery-photos {
+    margin-left: 150%;
+  }
+}
+
+
+@media (max-width: 768px) {
+
+  .stacking-card-wrapper h1 {
+    font-size: 48px;
+  }
+
+  .stacking-card-wrapper .card-2 h1 {
+    margin-bottom: 160px;
+  }
+  
+  .card-1 .features {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  .card-1 .feature {
+    gap: 16px;
+    width: 220px;
+    font-size: 18px;
+  }
+
+  .pot {
+    transform: rotate(35deg) scale(.7);
+    left: -160px;
+    top: -32px;
+  }
+
+  .tool {
+    transform: rotate(-40deg) scale(.7);
+    left: -90px;
+    bottom: 24px;
+    z-index: 5;
+  }
+
+  .beans {
+    transform: scale(.7);
+    left: -80px;
+  }
+
+  .drip-1 {
+    transform: rotate(-35deg) scale(.7);
+    right: -150px;
+    top: 150px;
+  }
+
+  .fine-cup {
+    transform: rotate(-50deg) scale(.7);
+    right: -280px;
+    top: 240px;
+  }
+
+  .drip-2 {
+    transform: rotate(-60deg) scale(.7);
+    right: -160px;
+    bottom: 60px;
+  }
+
+  .bakery-photos {
+    margin-left: 200%;
+  }
+
+  .bakery-feature p {
+    font-size: 28px;
+  }
+
 }
