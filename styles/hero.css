@@ -106,7 +106,7 @@
   letter-spacing: 0.05em;
 }
 
-@media (max-width: 1023px) {
+@media (max-width: 1024px) {
 
   .hero-content{
     padding-top: 64px;
@@ -118,7 +118,7 @@
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
 
   .hero-content{
     padding-top: 32px;

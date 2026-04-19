@@ -66,3 +66,15 @@
         line-height: 120%;
     }
 }
+
+@media (max-width: 450px) { 
+    .stars {
+        font-size: 1.8rem;
+    }
+
+    .about-text {
+        font-size: 1.8rem;
+        max-width: 95%;
+        line-height: 120%;
+    }
+}
